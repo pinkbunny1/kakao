@@ -52,13 +52,24 @@
   position: absolute;
   bottom: 60px;
   box-shadow: 3px 3px 15px #C1C1C1;
-  transition: transform .5s ease-in-out;
 }
+
+@keyframes scale {
+
+      50%{
+        transform: scale(.5, .5);
+        color:white;
+      }
+      100%{
+        transform: none;
+      }
+    }
 
 .chats__chat-btn.user-image:hover {
-  transform: scale(1.1);
+  animation: 1.5s scale infinite ease-in-out;
 }
 
+
 .chats__chat-btn.user-image i {
-  font-size: 30px;
+  font-size: 25px;
 }
