@@ -14,6 +14,12 @@
   flex-direction: column;
   align-items: center;
   color : #C1C1C1;
+  transition: transform 0.3s ease-in-out;
+;
+}
+
+.tab-bar__tab:hover {
+  transform : scale(1.2);
 }
 
 .tab-bar__tab i{

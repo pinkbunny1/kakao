@@ -52,6 +52,11 @@
   position: absolute;
   bottom: 60px;
   box-shadow: 3px 3px 15px #C1C1C1;
+  transition: transform .5s ease-in-out;
+}
+
+.chats__chat-btn.user-image:hover {
+  transform: scale(1.1);
 }
 
 .chats__chat-btn.user-image i {
