@@ -1,0 +1,45 @@
+.friends__section-title {
+  padding: 5px 20px;
+  border-top: solid 1px #C1C1C1;
+  border-bottom: solid 1px #C1C1C1;
+  font-size: 12px;
+  color: rgba(0,0,0,0.4);
+  font-weight: 600;
+}
+
+.friends__section:nth-of-type(2n) .friends__section-title {
+  border-top: none!important;
+}
+
+.friends__section-row {
+  padding: 5px 25px;
+  border-bottom: solid 1px #C1C1C1;
+
+}
+
+.friends__section-row.with-tagline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friends__section-row a {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.friends__section__user-image {
+  margin-right: 20px;
+}
+
+.friends__section-tagline {
+  padding: 15px 10px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7d7d7d;
+}
