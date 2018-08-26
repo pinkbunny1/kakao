@@ -3,7 +3,8 @@ A clone of Kakao App
 
 
 ## Demo :cake:
-https://pinkbunny1.github.io/kakao/index.html
+Main : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com
+Chat : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com/indiChat.html
 
 
 ## Kakao site
