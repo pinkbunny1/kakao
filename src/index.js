@@ -2,19 +2,19 @@ const express = require('express')
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+const path = require('path');
+const port = process.env.PORT || 3000;
 
-
-
-app.use(express.static(__dirname + '/public/'));
-
+app.use(express.static(__dirname + '/../public/'));
+console.log(__dirname+'../')
 
 app.get('/', (req, res)=> {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
 });
 
 
-http.listen(3000, () => {
-  console.log('Listening on *:3000');
+http.listen(port, () => {
+  console.log(`Listening on *:${port}`);
 });
 
 io.on('connection', socket => {

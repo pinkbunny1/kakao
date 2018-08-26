@@ -1,24 +1,66 @@
-.sender {
+/* Message from the Sender */
+.chat__message.chat__message--from {
   text-align: right;
-  margin: 5px;
-  /* padding: 5px; */
+  margin: 15px;
 }
 
-.sender span {
+.chat__message.chat__message--from .chat__message__text {
   background-color: #F9E28C;
   padding: 5px;
   display: inline-block;
-
+  margin-left: 5px;
 }
 
-.not_sender {
+
+/* Message from others */
+.chat__message.chat__message--to {
+  display: flex;
+  align-items: flex-start;
   text-align: left;
-  margin: 5px;
-  /* padding: 5px; */
+  margin: 15px;
 }
 
-.not_sender span {
+.chat__message.chat__message--to .chat__message__text {
   background-color: #ECECEC ;
   padding: 5px ;
   display: inline-block;
+  margin-right: 5px;
+}
+
+
+.chat__date-divider {
+  font-size: 11px;
+  color: #C1C1C1;
+  display: grid;
+  justify-content: center;
+}
+
+
+/* Message feature UIs */
+.chat__message-center {
+  align-self: flex-end;
+}
+
+.chat__message_time__container {
+  align-self: flex-end;
+  margin-left: 3px;
+}
+
+.chat__message__time {
+  color: #c1c1c1;
+  font-size: 10px;
+}
+
+.chat__message__user-name.user-name {
+  color: #c1c1c1;
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+img.chat__message__user-image.user-image {
+  margin-right: 10px;
+}
+
+.type-message {
+  display: flex;
 }
