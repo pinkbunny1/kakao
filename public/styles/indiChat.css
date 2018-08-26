@@ -1,0 +1,24 @@
+.sender {
+  text-align: right;
+  margin: 5px;
+  /* padding: 5px; */
+}
+
+.sender span {
+  background-color: #F9E28C;
+  padding: 5px;
+  display: inline-block;
+
+}
+
+.not_sender {
+  text-align: left;
+  margin: 5px;
+  /* padding: 5px; */
+}
+
+.not_sender span {
+  background-color: #ECECEC ;
+  padding: 5px ;
+  display: inline-block;
+}

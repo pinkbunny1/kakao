@@ -75,9 +75,11 @@
         <ul id="messages"></ul>
 
         <!-- RIGHT -->
-        <span class="chat__message__time">
-          17:59
-        </span>
+        <div>
+          <span class="chat__message__time">
+            17:59
+          </span>
+        </div>
       </div>
     </main>
 
@@ -105,21 +107,31 @@
         const messages = document.getElementById('messages');
 
 
-
         input.addEventListener("keyup", function(event) {
             event.preventDefault();
             if (event.keyCode === 13) {
               console.log(input.value)
-              socket.emit('chat message', input.value);
-
-              input.value = '';
+            if (input.value.length > 0){
+                socket.emit('chat message', input.value);
+                input.value = '';
+              }
               return false;
             }
         });
 
-        socket.on('chat message', function(msg) {
+        socket.on('chat message', function({msg, userId}) {
+          const client_socket_id = socket.id;
           const msg_li =  document.createElement('li');
-          msg_li.appendChild(document.createTextNode(msg));
+          const msg_li_span =  document.createElement('span');
+
+          console.log('client_socket_id:', client_socket_id)
+          console.log('userId:', userId)
+
+          const cl_value = client_socket_id === userId ? "sender" : "not_sender"
+          msg_li.setAttribute("class", cl_value);
+
+          msg_li_span.appendChild(document.createTextNode(msg))
+          msg_li.appendChild(msg_li_span)
           messages.appendChild(msg_li);
         })
     })();
