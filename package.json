@@ -1,0 +1,25 @@
+{
+  "name": "kakao-talk-clone",
+  "version": "1.0.0",
+  "description": "Cloning Kakao Talk app in the UI and has chatting feature in the backend supported by Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkbunny1/kakao.git"
+  },
+  "author": "Jin Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinkbunny1/kakao/issues"
+  },
+  "homepage": "https://github.com/pinkbunny1/kakao#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "express": "^4.15.2",
+    "mocha": "^5.2.0",
+    "socket.io": "^2.1.1"
+  }
+}

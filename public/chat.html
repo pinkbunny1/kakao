@@ -72,6 +72,8 @@
           <span class="chat__message__text">This is message from a friend</span>
         </div>
 
+        <ul id="messages"></ul>
+
         <!-- RIGHT -->
         <span class="chat__message__time">
           17:59
@@ -84,7 +86,7 @@
       <i class="fas fa-plus fa-lg"></i>
       <!-- INPUT FIELD -->
       <div class="type-message__input">
-        <input type="text">
+        <input type="text" id="m">
         <i class="far fa-smile"></i>
         <span class="type-message__input__record-btn">
           <i class="fas fa-microphone"></i>
@@ -93,5 +95,35 @@
       <!-- SMILEY ICON -->
       <!-- RECORD BUTTON -->
     </div>
+
+  <!-- Socket IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    (function () {
+        const socket = io();
+        const input = document.getElementById("m");
+        const messages = document.getElementById('messages');
+
+
+
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+              console.log(input.value)
+              socket.emit('chat message', input.value);
+
+              input.value = '';
+              return false;
+            }
+        });
+
+        socket.on('chat message', function(msg) {
+          const msg_li =  document.createElement('li');
+          msg_li.appendChild(document.createTextNode(msg));
+          messages.appendChild(msg_li);
+        })
+    })();
+
+  </script>
 </body>
 </html>
