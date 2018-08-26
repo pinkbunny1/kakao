@@ -24,3 +24,4 @@ They provide Kakao app for PC and Mobile devices. I tried to clone their app and
 - [x] Add messaging feature with socket.io
   - [ ] Extra features for chatting
 - [ ] Add features for each UI
+- [ ] Add profile page for users
