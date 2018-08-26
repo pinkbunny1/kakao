@@ -4,6 +4,7 @@ A clone of Kakao App
 
 ## Demo :cake:
 Main : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com
+
 Chat : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com/indiChat.html
 
 
