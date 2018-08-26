@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Cloning Kakao Talk app in the UI and has chatting feature in the backend supported by Socket.io",
   "private": true,
-  "main": "./src/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
