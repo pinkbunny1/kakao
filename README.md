@@ -1,5 +1,5 @@
-# Kakao Clone
-A clone of Kakao App with React.js, React-Router, Express and Socket.io
+# Kakao Clone :v:
+A clone of Kakao App with React.js, React-Router, Express and Socket.io deployed in AWS Beanstalk.
 
 
 ## Demo :cake:
