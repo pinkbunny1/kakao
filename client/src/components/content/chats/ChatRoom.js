@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import socketIOClient from "socket.io-client";
 
-class Chatroom extends Component {
+class ChatRoom extends Component {
   componentDidMount() {
     // const socket= socketIOClient
   }

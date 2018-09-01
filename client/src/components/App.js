@@ -12,9 +12,12 @@ import Footer from './footer/Footer'
 class App extends Component {
 
   render() {
+    // probably only want this in browsers that don’t support the HTML5 history API.
+    const supportsHistory = 'pushState' in window.history
+    {/* <BrowserRouter forceRefresh={!supportsHistory}/> */}
   return(
     <div>
-      <BrowserRouter>
+      <BrowserRouter forceRefresh={!supportsHistory}>
         <div>
           {/* <MainHeader url={window.location.pathname}/> */}
           <Route component={MainHeader}/>
