@@ -1,14 +1,9 @@
-import React, {Component} from 'react'
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom' // using url(route) to fetch different components
-// BrowserRouter: looks at the current URL and tells react-router which set of components to show at any given time
-// BrowserRouter, Route are components that can be used inside return div
-import MainHeader from './header/MainHeader'
-import MainContent from './content/MainContent'
-import Footer from './footer/Footer'
+import React from 'react'
+import { BrowserRouter, Route, Link, NavLink, Switch } from 'react-router-dom'
 
-// React-Router
-// App = functional component (Make Stateless Component that gathers children components)
-
+import MainHeader from '../components/header/MainHeader'
+import MainContent from '../components/content/MainContent'
+import Footer from '../components/footer/Footer'
 
 const PageNotFound = () => {
   return(
@@ -29,12 +24,10 @@ const PageNotFound = () => {
   )
 }
 
-class App extends Component {
+const AppRouter = () => {
 
-  render() {
     // probably only want this in browsers that don’t support the HTML5 history API.
     const supportsHistory = 'pushState' in window.history
-    {/* <BrowserRouter forceRefresh={!supportsHistory}/> */}
   return(
     <div>
       <BrowserRouter forceRefresh={!supportsHistory}>
@@ -85,6 +78,6 @@ class App extends Component {
     </div>
   )
 }
-}
 
-export default App
+
+export default AppRouter
