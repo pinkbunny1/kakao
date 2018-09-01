@@ -18,7 +18,7 @@ They provide Kakao app for PC and Mobile devices. I tried to clone their app and
 
 
 ## To do :point_up:
-- [x] Build the front end of all pages
+- [x] Build basic UI for all pages
 - [x] Finish the messaging UI
 - [x] Add server with express.js
 - [x] Add messaging feature with socket.io

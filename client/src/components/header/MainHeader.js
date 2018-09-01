@@ -1,0 +1,30 @@
+import React, {Component} from 'react'
+
+import TopHeader from './TopHeader'
+import Header from './Header'
+
+// const MainHeader = (props) => {
+//   console.log('props:', this.props.location)
+//   return(
+//     <div className="universal-header">
+//       <TopHeader/>
+//       <Header url={props.path}/>
+//     </div>
+//   )
+// }
+class MainHeader extends Component {
+
+  render() {
+    console.log('mainheader rpops:',this.props)
+    return (
+
+      <div className="universal-header">
+        <TopHeader/>
+        <Header url={this.props.location.pathname}/>
+      </div>
+    )
+  }
+
+}
+
+export default MainHeader

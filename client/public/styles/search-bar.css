@@ -4,12 +4,12 @@
 }
 
 .search-bar input {
-  width: !important 100%;
+  width: 100%;
   padding: 5px 10px;
   border-radius: 5px;
   box-sizing: border-box;
   border: 0;
-  background-color: !important #F1F2F3;
+  background-color: #F1F2F3;
   font-size: 13px;
   text-align: center;
 }

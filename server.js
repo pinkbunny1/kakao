@@ -3,13 +3,12 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const path = require('path');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
-app.use(express.static(__dirname + '/../public/'));
-console.log(__dirname+'../')
+app.use(express.static(__dirname + '/public/'));
 
 app.get('/', (req, res)=> {
-  res.sendFile(path.resolve(__dirname + '/../public/index.html'));
+  res.sendFile(path.resolve(__dirname + '/public/index.html'));
 });
 
 
