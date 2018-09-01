@@ -28,7 +28,9 @@ class Header extends Component {
         return <Find/>
       case '/more':
         break
-      case '/chatroom':
+      case '/chats/room/Khanie':
+        return <Jin/>
+      case '/chats/room/Kakao':
         return <Jin/>
     }
   }

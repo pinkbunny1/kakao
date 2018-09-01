@@ -15,12 +15,12 @@ import Header from './Header'
 class MainHeader extends Component {
 
   render() {
-    console.log('mainheader rpops:',this.props)
     return (
 
       <div className="universal-header">
         <TopHeader/>
-        <Header url={this.props.location.pathname}/>
+        <Header url={this.props.location.pathname}
+        />
       </div>
     )
   }

@@ -22,7 +22,7 @@ class MainContent extends Component {
         {this.props.location.pathname === "/chats" ? <Chats/> : ''}
         {this.props.location.pathname === "/find" ? <Find/> : ''}
         {this.props.location.pathname === "/more" ? <More/> : ''}
-        {this.props.location.pathname === "/chatroom" ? <ChatRoom/> : ''}
+        {this.props.page === "chatroom" ? <ChatRoom name={this.props.match.params.name}/> : ''}
       </div>
     )
   }

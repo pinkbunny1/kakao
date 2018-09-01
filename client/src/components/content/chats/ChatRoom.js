@@ -8,6 +8,7 @@ class ChatRoom extends Component {
   render() {
     return(
       <div>
+        <p className="user-name">You are now talking to {this.props.name}</p>
         <br/>
         <div className="type-message">
           {/* <!-- ICON --> */}

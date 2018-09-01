@@ -26,7 +26,7 @@ const PageNotFound = () => {
 
 const AppRouter = () => {
 
-    // probably only want this in browsers that don’t support the HTML5 history API.
+    // probably only want 'Force Refresh' in browsers that don’t support the HTML5 history API.
     const supportsHistory = 'pushState' in window.history
   return(
     <div>
@@ -65,7 +65,7 @@ const AppRouter = () => {
 
               <Route
                 strict sensitive
-                exact path='/chatroom'
+                exact path='/chats/room/:name'
                 render={(props) => <MainContent {...props}
                 searchBar={false} page='chatroom'/>}
               />

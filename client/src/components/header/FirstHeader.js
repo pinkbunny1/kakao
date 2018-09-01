@@ -38,7 +38,7 @@ const Find = () => {
 
 const Jin = () => {
   return(
-    <span className="header__text">JIN</span>
+    <span className="header__text">Chat Room</span>
   )
 }
 

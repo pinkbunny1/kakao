@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 
 
 const Chats = () => {
@@ -8,22 +8,27 @@ const Chats = () => {
       <ul className="chats__list">
           <li className="chats__chat-row">
             {/* <!-- Divided into two columms --> */}
-            <a href="/chatroom">
+            {/* <a href="/chatroom"> */}
+            <NavLink
+              to="/chats/room/Khanie"
+            >
               <div className="chat__content">
                   <img src="images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
                   <div className="chat__preview">
-                      <h3 className="chat__user-name user-name">JIN</h3>
+                      <h3 className="chat__user-name user-name">Khanie</h3>
                       <span className="chat__last-message">Hey this is the last message.</span>
                   </div>
               </div>
               <span className="chat__date-time">
                   15:55
               </span>
-            </a>
+            </NavLink>
           </li>
 
           <li className="chats__chat-row">
-            <a href="/chatroom">
+            <NavLink
+              to="/chats/room/Kakao"
+              >
               <div className="chat__content">
                   <img src="images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
                   <div className="chat__preview">
@@ -34,7 +39,7 @@ const Chats = () => {
               <span className="chat__date-time">
                   15:55
               </span>
-            </a>
+            </NavLink>
           </li>
       </ul>
     </div>
