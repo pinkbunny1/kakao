@@ -17,7 +17,7 @@ http.listen(port, () => {
 });
 
 io.on('connection', socket => {
-  console.log('User connected:', socket.id);
+  console.log('Server:connected:', socket.id);
 
   socket.on('disconnect',  () => {
     console.log('User disconnected')
@@ -25,6 +25,7 @@ io.on('connection', socket => {
 
   socket.on('chat message', function(msg){
     // socket.broadcast.emit('chat message', msg);
+    console.log('this is msg:', msg)
     io.emit('chat message', {msg, userId: socket.id});
   });
 
