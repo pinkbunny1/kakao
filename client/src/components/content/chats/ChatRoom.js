@@ -3,49 +3,42 @@ import socketIOClient from "socket.io-client";
 
 import MsgTo from './MsgTo'
 import MsgFrom from './MsgFrom'
+const socket = socketIOClient('http://localhost:3001')
 
 class ChatRoom extends Component {
   constructor() {
     super()
     this.message = React.createRef()
-    this.state = {
-      response: false,
-      endpoint: 'http://localhost:3001'
-    }
   }
 
   componentDidMount() {
-    const { endpoint } = this.state
-    const socket = socketIOClient(endpoint)
+    // From Server
     socket.on('chat message', ({msg, userId}) => {
-      console.log('hi from client:',msg,userId)
-
-      console.log('id:', socket.id)
+      console.log(`Recieved From Server: ${msg} and socketID: ${userId}`)
     })
-
   }
-
 
   handleInputChange = (e) => {
     e.preventDefault()
-    console.log('e.target.value',e.target)
-    const a = this.message.current.value
-    console.log(a)
-    const socket = socketIOClient(this.state.endpoint)
+    const msg = this.message.current.value
+    console.log('Msg:',msg)
 
     // Sending to Server
     socket.emit('chat message', this.message.current.value)
-
-
+    console.log('sending socket id:', socket.id)
   }
+
+
   render() {
     return(
       <div>
+        <APPEND COMPONENT HERE BASED ON EVENTS !?!?!>
         <p className="user-name">You are now talking to {this.props.name}</p>
         <br/>
         <div className="type-message">
           {/* <!-- ICON --> */}
           <i className="fas fa-plus fa-lg"></i>
+
           {/* <!-- INPUT FIELD --> */}
           <div className="type-message__input">
             <form onSubmit={this.handleInputChange}>
