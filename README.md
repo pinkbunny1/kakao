@@ -1,5 +1,5 @@
-# Kakao Clone :v:
-A clone of Kakao App with React.js, React-Router, Express and Socket.io deployed in AWS Beanstalk.
+# Kakao Messaging App :v:
+ Messaging app, its design is built from scratch using Kakao App UI with React.js, React-Router, Express and Socket.io deployed in AWS Beanstalk.
 
 
 ## Demo :cake:
