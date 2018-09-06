@@ -5,7 +5,7 @@ import Index from './Index'
 import Find from './Find'
 import More from './More'
 
-import Chats from './chats/Chats'
+import ChatsList from './chats/ChatsList'
 import ChatRoom from './chats/ChatRoom'
 
 
@@ -19,7 +19,7 @@ class MainContent extends Component {
       <div className={page}>
         {this.props.searchBar ? <SearchBarContent/> :''}
         {this.props.location.pathname === "/" ? <Index/> : ''}
-        {this.props.location.pathname === "/chats" ? <Chats/> : ''}
+        {this.props.location.pathname === "/chats" ? <ChatsList/> : ''}
         {this.props.location.pathname === "/find" ? <Find/> : ''}
         {this.props.location.pathname === "/more" ? <More/> : ''}
         {this.props.page === "chatroom" ? <ChatRoom name={this.props.match.params.name}/> : ''}

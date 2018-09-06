@@ -1,12 +1,13 @@
 import React from 'react'
 
 const MsgFrom = (props) => {
+ console.log('Props from MsgFrom', props)
   return(
-    <div class="chat__message chat__message--from">
-       <span class="chat__message__time">
-         17:55
+    <div className="chat__message chat__message--from">
+       <span className="chat__message__time">
+         {props.msg.msgTime}
        </span>
-       <span class="chat__message__text">{props.message}</span>
+       <span className="chat__message__text">{props.msg.msg}</span>
    </div>
   )
 

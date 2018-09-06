@@ -7,6 +7,8 @@ import { createStore, applyMiddleware } from 'redux'
 import App from './App'
 import reducers from './reducers'
 import './styles/style.css';
+import './images/dog1.jpeg'
+
 
 // Initialising data
 // Redux : holds all data(state) inside the app

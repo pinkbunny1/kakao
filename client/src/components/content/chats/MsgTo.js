@@ -1,21 +1,22 @@
 import React from 'react'
 
 const MsgTo = (props) => {
+  console.log('Props from MsgTo:', props)
   return(
-    <div class="chat__message chat__message--to">
+    <div className="chat__message chat__message--to">
         {/* <!-- LEFT --> */}
-        <img src="images/dog1.jpeg" alt="" class="chat__message__user-image user-image"/>
+        <img src="../../../images/dog1.jpeg" alt="" className="chat__message__user-image user-image"/>
 
         {/* <!-- CENTER --> */}
-        <div class="chat__message-center">
-          <h3 class="chat__message__user-name user-name">{props.username}</h3>
-          <span class="chat__message__text">{props.message}</span>
-        </div> -->
+        <div className="chat__message-center">
+          <h3 className="chat__message__user-name user-name">{props.username}</h3>
+          <span className="chat__message__text">{props.msg.msg}</span>
+        </div>
 
         {/* <!-- RIGHT --> */}
-        <div class="chat__message_time__container">
-          <span class="chat__message__time">
-            17:59
+        <div className="chat__message_time__container">
+          <span className="chat__message__time">
+            {props.msg.msgTime}
           </span>
         </div>
     </div>

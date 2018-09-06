@@ -23,10 +23,10 @@ io.on('connection', socket => {
     console.log('User disconnected')
   });
 
-  socket.on('chat message', function(msg){
+  socket.on('send message to server', function(msg){
     // socket.broadcast.emit('chat message', msg);
     console.log('this is msg:', msg)
-    io.emit('chat message', {msg, userId: socket.id});
+    io.emit('recieve message from server', {msg, userId: socket.id});
   });
 
 

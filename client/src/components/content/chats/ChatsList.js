@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-const Chats = () => {
+const ChatsList = () => {
   return (
     <div>
       <ul className="chats__list">
@@ -13,7 +13,7 @@ const Chats = () => {
               to="/chats/room/Khanie"
             >
               <div className="chat__content">
-                  <img src="images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
+                  <img src="./images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
                   <div className="chat__preview">
                       <h3 className="chat__user-name user-name">Khanie</h3>
                       <span className="chat__last-message">Hey this is the last message.</span>
@@ -46,4 +46,4 @@ const Chats = () => {
   )
 }
 
-export default Chats
+export default ChatsList
