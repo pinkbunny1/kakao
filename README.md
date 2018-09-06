@@ -21,10 +21,12 @@ They provide Kakao app for PC and Mobile devices. I tried to clone their app and
 - [x] Build basic UI for all pages
 - [x] Finish the messaging UI
 - [x] Add server with express.js
+- [x] SocketIO integrated in the Server and Client side
 - [x] Add React.js
 - [x] Add React-router
 - [x] Convert plain HTML --> Components
 - [x] Add messaging feature with socket.io
+  - [x] Messages are sent with the user's local time
   - [ ] Extra features for chatting
 - [ ] Add features for each UI
 - [ ] Add profile page for users
