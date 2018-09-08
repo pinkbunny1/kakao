@@ -14,7 +14,7 @@ https://www.kakaocorp.com/service/KakaoTalk?lang=en
 
 ## About
 Kakao is the most popular messaging app from South Korea.
-They provide Kakao app for PC and Mobile devices. I tried to clone their app and add messaging feature in the backend with socket.io and express modules.
+They provide Kakao app for PC and Mobile devices. I tried to clone their app design and add messaging feature in the backend with socket.io and express modules from scratch. Clone here does **NOT** mean cloning codes, it means cloning the UI design by looking at the app from the mobile phone screen.
 
 
 ## To do :point_up:
