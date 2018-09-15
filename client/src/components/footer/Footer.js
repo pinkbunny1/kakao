@@ -9,7 +9,7 @@ class Footer extends Component {
         <nav className="tab-bar">
             <NavLink
               exact
-              to="/"
+              to="/friends"
               className="tab-bar__tab"
               activeClassName="tab-bar__tab tab-bar__tab--selected"
               >

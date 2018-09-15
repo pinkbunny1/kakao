@@ -5,7 +5,7 @@ class Header extends Component {
 
   first() {
     switch (this.props.url) {
-      case '/':
+      case '/friends':
         return <Manage/>
       case '/chats':
         return <Edit/>
@@ -20,7 +20,7 @@ class Header extends Component {
 
   second() {
     switch (this.props.url) {
-      case '/':
+      case '/friends':
         return <Friends/>
       case '/chats':
         return <Chats/>
@@ -37,7 +37,7 @@ class Header extends Component {
 
   third() {
     switch (this.props.url) {
-      case '/':
+      case '/friends':
         return <SetIcon/>
       case '/chats':
         break

@@ -3,7 +3,11 @@ import { BrowserRouter, Route, Link, NavLink, Switch } from 'react-router-dom'
 
 import MainHeader from '../components/header/MainHeader'
 import MainContent from '../components/content/MainContent'
-import Footer from '../components/footer/Footer'
+
+import FriendsPG from '../components/content/friends'
+import Chats from '../components/content/chats'
+import Finds from '../components/content/find'
+import MorePG from '../components/content/more'
 
 const PageNotFound = () => {
   return(
@@ -34,45 +38,32 @@ const AppRouter = () => {
         <div>
           <Route component={MainHeader}/>
             <Switch>
+
               <Route
-                strict sensitive
-                exact path='/'
-                render={(props) => <MainContent {...props} searchBar={true} page='friends'/>}
+                path='/friends'
+                component={FriendsPG}
               />
 
               <Route
-                strict sensitive
-                exact path='/chats'
-                render={(props) => <MainContent {...props}
-                searchBar={true} page='chats'/>}
-
+                // Not strict Rule and Chats component further filters the rules
+                path='/chats'
+                component={Chats}
               />
 
               <Route
-                strict sensitive
-                exact path='/find'
-                render={(props) => <MainContent {...props}
-                searchBar={false} page='find'/>}
-
+                // Not strict Rule and Chats component further filters the rules
+                path='/find'
+                component={Finds}
               />
 
               <Route
-                strict sensitive
-                exact path='/more'
-                render={(props) => <MainContent {...props}
-                searchBar={false} page='more'/>}
-              />
-
-              <Route
-                strict sensitive
-                exact path='/chats/room/:name'
-                render={(props) => <MainContent {...props}
-                searchBar={false} page='chatroom'/>}
+                path='/more'
+                component={MorePG}
               />
 
               <Route component={PageNotFound} />
             </Switch>
-          <Route render={(props)=><Footer {...props}/>}/>
+          {/* <Route render={(props)=><Footer {...props}/>}/> */}
         </div>
       </BrowserRouter>
     </div>

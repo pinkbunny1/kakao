@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import SearchBarContent from './SearchBarHeader'
-import Index from './Index'
-import Find from './Find'
-import More from './More'
+import SearchBarContent from './others/SearchBarHeader'
+import Index from './home/Index'
+import Find from './find/Find'
+import More from './more/More'
 
 import ChatsList from './chats/ChatsList'
 import ChatRoom from './chats/ChatRoom'

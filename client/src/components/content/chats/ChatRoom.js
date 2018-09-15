@@ -16,16 +16,15 @@ const socketClient = io('http://localhost:3001')
 
 // 5. 마지막으로 <main className="chat"> 밑에 있는 this._handleMsgCompos() 함수를 불러 차일트 컴포넌트를 부릅니다.
 
-
 class ChatRoom extends Component {
   constructor(props) {
+    console.log('params:',props.match.params.name)
     super(props)
-    // this.message = React.createRef()
     this.state = {
       messages: [], //메세지 아이템 structure: [{ msg:'hello', userId:'asdfasjdkfljwle', msgTime:'...' }]
       mainUserId: false,
       tempMsg : '',
-      tempUserName: props.name
+      tempUserName: props.match.params.name
 
     }
   }
@@ -109,10 +108,10 @@ class ChatRoom extends Component {
 
 
   render() {
-    const { tempMsg } = this.state
+    const { tempMsg, tempUserName } = this.state
     return(
       <div>
-        <p className="user-name">You are now talking to {this.props.name}</p>
+        <p className="user-name">You are now talking to {tempUserName}</p>
         <main className="chat">
           {/* <APPEND COMPONENT HERE BASED ON EVENTS !?!?!/> */}
 

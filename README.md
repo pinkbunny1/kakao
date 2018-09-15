@@ -30,3 +30,4 @@ They provide Kakao app for PC and Mobile devices. I tried to clone their app des
   - [ ] Extra features for chatting
 - [ ] Add features for each UI
 - [ ] Add profile page for users
+- [ ] Use HOC to build layouts to toggle Footer based on URL

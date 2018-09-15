@@ -1,10 +1,12 @@
 import React from 'react'
 
+import SearchBarHeader from '../others/SearchBarHeader'
 
 
-const Index = () => {
+const Friends = () => {
   return (
     <div>
+      <SearchBarHeader/>
       <section className="friends__section">
           <header>
               <h6 className="friends__section-title">My Profile</h6>
@@ -48,4 +50,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Friends

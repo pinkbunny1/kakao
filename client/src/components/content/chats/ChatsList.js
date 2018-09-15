@@ -1,16 +1,19 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import SearchBarHeader from '../others/SearchBarHeader'
+
 
 const ChatsList = () => {
   return (
     <div>
+      <SearchBarHeader/>
       <ul className="chats__list">
           <li className="chats__chat-row">
             {/* <!-- Divided into two columms --> */}
             {/* <a href="/chatroom"> */}
             <NavLink
-              to="/chats/room/Khanie"
+              to="/chats/Khanie"
             >
               <div className="chat__content">
                   <img src="./images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
@@ -27,7 +30,7 @@ const ChatsList = () => {
 
           <li className="chats__chat-row">
             <NavLink
-              to="/chats/room/Kakao"
+              to="/chats/Kakao"
               >
               <div className="chat__content">
                   <img src="images/dog1.jpeg" alt="" className="chats__content__user-image user-image" />
