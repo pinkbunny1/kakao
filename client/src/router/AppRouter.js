@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, NavLink  Switch } from 'react-router-dom'
 
 import MainHeader from '../components/header/MainHeader'
 
@@ -12,8 +12,6 @@ const PageNotFound = () => {
   return(
     <div>
       <h2>Page Not Found 404 !</h2>
-      <br/>
-      <Link to="/">Back Home</Link>
       <br/>
       <NavLink
         to="/"
