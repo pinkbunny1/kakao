@@ -1,8 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Route, Link, NavLink, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import MainHeader from '../components/header/MainHeader'
-import MainContent from '../components/content/MainContent'
 
 import FriendsPG from '../components/content/friends'
 import Chats from '../components/content/chats'
