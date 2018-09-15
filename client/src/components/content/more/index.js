@@ -8,12 +8,12 @@ import Footer from '../../footer/Footer'
 
 // How to Divide routes for Nested Routes !!! https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 
-const MorePG = () => (
+const MorePG = ({match}) => (
   <div>
     <Switch>
-      <Route exact path='/more' component={More} />
+      <Route exact path={`${match.url}`} component={More} />
     </Switch>
-    <Route exact path='/more' component={Footer} />
+    <Route exact path={`${match.url}`} component={Footer} />
   </div>
 )
 
