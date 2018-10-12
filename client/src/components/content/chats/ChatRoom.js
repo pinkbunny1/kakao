@@ -6,16 +6,6 @@ import MsgFrom from './MsgFrom'
 const socketClient = io('http://localhost:3001')
 
 
-// 1. componentDidMount() 에서 소켓 이벤트('recieve message from server')를 기다립니다. 유저가 인풋에 메세지를 쓰기전에 이벤트가 없습니다
-
-// 2. _handleFormSubmit() 유저가 메세지를 쓰면, 폼에서 섯밋 이벤트로 이 함수를 부릅니다. 이함수는 소켓이벤트('send message to server')를 메세지와 함께 보냅니다. 그리고 _recordMainUserId(socketClient.id) 함수로 state.mainUserId 값을 엡뎃합니다. 보낸사람의 소켓아이디가 메인유저아디가 됩니다. 이번 처음 메세지 보낼때 딱 1번 엡뎁됩니다.
-
-// 3. 서버에서 소켓이 'send message to server'이벤트를 받고 다시 'recieve message from server'이벤트를 아이디와 소케아이디를 클라이언트에 보냅니다. 클라이언트는 받구 ...
-
-// 4. _updateMsgState(msg, userId) 함수를 부릅니다. 여기서 state에 있는 messages인 리스트에 오브젝트로 msg와 userId 를 넣습니다.
-
-// 5. 마지막으로 <main className="chat"> 밑에 있는 this._handleMsgCompos() 함수를 불러 차일트 컴포넌트를 부릅니다.
-
 class ChatRoom extends Component {
   constructor(props) {
     console.log('params:',props.match.params.name)
@@ -94,8 +84,8 @@ class ChatRoom extends Component {
     const { messages, mainUserId, tempUserName } = this.state
     if (messages.length) {
       // 에로우함수 리턴 괄호 사용법: https://stackoverflow.com/questions/28889450/when-should-i-use-return-in-es6-arrow-functions
-      return messages.map(msg => (
-       msg.userId === mainUserId ?  <MsgFrom msg={msg} /> :  <MsgTo msg={msg} username={tempUserName} />
+      return messages.map((msg, idx) => (
+       msg.userId === mainUserId ?  <MsgFrom key={idx} msg={msg} /> :  <MsgTo key={idx} msg={msg} username={tempUserName} />
      ))
 
      //  return messages.map(msg => {
@@ -129,7 +119,7 @@ class ChatRoom extends Component {
 
           {/* <!-- INPUT FIELD --> */}
           <div className="type-message__input">
-            <form onSubmit={this._handleFormSubmit}>
+            <form onSubmit={this._handleFormSubmit} autocomplete="off">
               <input type="text" id="m" value={tempMsg} onChange={this._handleInputChange}/>
             </form>
           </div>

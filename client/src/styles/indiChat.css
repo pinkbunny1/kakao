@@ -63,4 +63,16 @@ img.chat__message__user-image.user-image {
 
 .type-message {
   display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+
+.type-message__input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#m {
+  outline: none;
+  border: 1px solid #c1c1c1;
 }

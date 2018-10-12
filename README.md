@@ -2,10 +2,17 @@
  Messaging app, its design is built from scratch using Kakao App UI with React.js, React-Router, Express and Socket.io deployed in AWS Beanstalk.
 
 
-## Demo :cake:
-Main : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com
+## Installation
+```bash
+$ clone https://github.com/pinkbunny1/kakao.git
+$ cd kakao
+$ npm install
+$ npm run dev (for development)
+$ npm run start (for production)
+```
 
-Chat : http://kakaoapp.vccmpmcmtc.us-west-2.elasticbeanstalk.com/indiChat.html
+## Demo :cake:
+<img src="http://g.recordit.co/TEp5UwLaha.gif" width="480" height="270" alt="kakao-msg-app-demo">
 
 
 ## Kakao site
@@ -31,3 +38,5 @@ They provide Kakao app for PC and Mobile devices. I tried to clone their app des
 - [ ] Add features for each UI
 - [ ] Add profile page for users
 - [ ] Use HOC to build layouts to toggle Footer based on URL
+- [ ] Add Auth
+- [ ] Add Session

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom'
 
 import MainHeader from '../components/header/MainHeader'
 
@@ -35,6 +35,8 @@ const AppRouter = () => {
         <div>
           <Route component={MainHeader}/>
             <Switch>
+
+              <Redirect exact from="/" to="/friends" />
 
               <Route
                 path='/friends'

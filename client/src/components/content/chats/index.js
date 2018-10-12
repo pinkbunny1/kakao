@@ -11,7 +11,7 @@ const Chats = ({match}) => (
   <div>
     <Switch>
       <Route exact path={`${match.url}`} component={ChatsList} />
-      <Route path={`${match.url}/:name`}component={ChatRoom} />
+      <Route path={`${match.url}/:name`} component={ChatRoom} />
     </Switch>
     <Route exact path={`${match.url}`} component={Footer} />
   </div>
