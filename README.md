@@ -12,7 +12,7 @@ $ npm run start (for production)
 ```
 
 ## Demo :cake:
-<img src="http://g.recordit.co/TEp5UwLaha.gif" width="480" height="270" alt="kakao-msg-app-demo">
+<img src="http://g.recordit.co/TEp5UwLaha.gif" width="3000" alt="kakao-msg-app-demo">
 
 
 ## Kakao site
